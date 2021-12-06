@@ -18,11 +18,16 @@ sudo cp gporter_reworked /usr/local/bin/
 Sascha made a simple (but very useful) description in "POI-Format.ods".
 
 ## Usage
-On Sascha's Linux machine (which has teh automounter active) when the GPORTER GP-102 is connected it will appear in something like "/media/sascha/CANMORE/GP-102".
+On Sascha's Linux machine (which has the automounter active) when the GPORTER GP-102 is connected it will appear in something like "/media/sascha/CANMORE/GP-102".
+
 If you do not use the automounter, try the 'blkid' command. With this info I added and entry to fstab like this:
+
 UUID=4578-49FC /mnt/GPS vfat noauto,users 0 0
+
 After mounting, you'll find the POI's at:
+
 /mnt/GPS/GP-102/POIs
+
 The file names are 000 001 ...
 
 ### Setting a POI
