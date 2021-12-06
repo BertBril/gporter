@@ -48,11 +48,11 @@ To read a coordinate enter enter in a shell (bash) "cd /media/username/CANMORE/G
 
 gporter -r 001
 
-This may output a coordinate like:
+This may output a name and coordinate like:
 
-N48.712320 E9.306870
+1204-1533 N48.71232 E9.30687
 
-Enter this one in google maps to see where it is.
+Enter the N/E part one in google maps to see where it is.
 
 ## Zest-coordinates 
 In the folder gporter_files you'll find some test coordinates.
