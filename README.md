@@ -3,7 +3,9 @@ Setting and reading POIs on a GPORTER GP-102 GPS device for geocaching or other 
 
 ## Intention
 Sascha bought GPORTER GP-102 device for geocaching. Sadly the included windows software does not allow to set POIs. So the device became pretty useless for geocaching. 
-He wrote a simple command line application, that directly can set POIs and read them. So geocaching or google maps coordinates in decimal format can be taken.  
+He wrote a simple command line application, that directly can set POIs and read them. So geocaching or google maps coordinates in decimal format can be taken.
+
+Bert just wanted to handle the POIs in his own processing pipeline, and decided to rework Sascha's initial program so he could understand it, and make a small change to the '-r' functionality.
 
 
 ## Compile
@@ -13,12 +15,12 @@ gcc gporter_reworked.c -o gporter_reworked
 sudo cp gporter_reworked /usr/local/bin/
 
 ## The POI format
-You'll find a simple description in "POI-Format.ods".
+Sascha made a simple (but very useful) description in "POI-Format.ods".
 
 ## Usage
-On my linux machine when the GPORTER GP-102 is connected it will appear in "/media/"username"/CANMORE/GP-102". The place will be different on your machine.
-If you do not use the automounter, try the 'blkid' command. I added and entry to fstab like this:
-UUID=4588-49FC /mnt/GPS vfat noauto,users 0 0
+On Sascha's Linux machine (which has teh automounter active) when the GPORTER GP-102 is connected it will appear in something like "/media/sascha/CANMORE/GP-102".
+If you do not use the automounter, try the 'blkid' command. With this info I added and entry to fstab like this:
+UUID=4578-49FC /mnt/GPS vfat noauto,users 0 0
 After mounting, you'll find the POI's at:
 /mnt/GPS/GP-102/POIs
 The file names are 000 001 ...
